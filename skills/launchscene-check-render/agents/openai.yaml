@@ -1,0 +1,4 @@
+interface:
+  display_name: "Launchscene render check"
+  short_description: "Inspect a real video export and report its limits"
+  default_prompt: "Use $launchscene-check-render to inspect my MP4 against its brief and return measured results, visible issues and unverified areas."

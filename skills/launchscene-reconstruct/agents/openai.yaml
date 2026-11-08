@@ -1,0 +1,4 @@
+interface:
+  display_name: "Launchscene reconstruction"
+  short_description: "Build a reference-led film with your own assets"
+  default_prompt: "Use $launchscene-reconstruct with my reference brief and assets to build an editable video and checked MP4."
