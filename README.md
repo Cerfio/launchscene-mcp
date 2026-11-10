@@ -20,11 +20,21 @@ Your agent searches launch scenes, reads their measured timing, text, camera and
 claude mcp add --transport http launchscene https://launchscene.app/api/mcp
 ```
 
-**Cursor, VS Code and other clients**
+**Cursor** (`~/.cursor/mcp.json`) **and other clients**
 
 ```json
 {
   "mcpServers": {
+    "launchscene": { "url": "https://launchscene.app/api/mcp" }
+  }
+}
+```
+
+**VS Code** (`.vscode/mcp.json`)
+
+```json
+{
+  "servers": {
     "launchscene": { "type": "http", "url": "https://launchscene.app/api/mcp" }
   }
 }
@@ -46,11 +56,21 @@ The other tools go deeper:
 
 - **Inspect**: `get_scene`, `get_scenes`, `get_video`, `get_video_structure`, `get_frames`
 - **Measure**: `get_text_track`, `get_camera_track`, `get_transcript`, `get_audio_map`
-- **Explore the corpus**: `find_similar`, `list_brands`, `get_brand`, `corpus_stats`, `typical_structure`, `compare_groups`, `transitions_after`, `pattern_search`, `trends`, `search_by_moment`
-- **Plan and check your own film**: `plan_structure`, `adapt_scene`, `beat_grid`, `export_recipe` (Remotion or HyperFrames starter code), `generation_prompts`, `music_brief`, `critique_plan`, `compare_to_reference`, `readability_check`
+- **Explore the corpus**: `find_similar`, `corpus_stats`, `typical_structure`, `compare_groups`, `transitions_after`, `pattern_search`, `trends`, `search_by_moment`, `list_formulas`, `get_formula`
+- **Work in a brand's style**: `list_brands`, `get_brand`, `get_brand_kit` (a brand's house style as rules measured on its own launches: palette, type, format, techniques, transitions, opening, call to action, voice, pacing, each with examples)
+- **Plan your own film**: `plan_from_references` (your brief plus references becomes a beat sheet and shot list), `storyboard`, `plan_structure`, `adapt_scene`, `beat_grid`, `generation_prompts`, `music_brief`
+- **Build and check it**: `export_recipe` (Remotion or HyperFrames starter code), `critique_plan`, `compare_to_reference`, `readability_check`
 - **Keep**, with a linked account: `save_to_board`, `list_boards`, `get_history`, `suggest_correction`
 
 Optional tools appear only when their service is configured. Use `tools/list` to see what your credentials can call.
+
+## Try these prompts
+
+- *Find three launch-video scenes where a cursor clicks Export and the file appears, and show them side by side.*
+- *Plan a 30-second launch film for my CLI tool from two contrasting references, then storyboard it.*
+- *Turn the first scene into a frame-numbered reference brief for a 30 fps Remotion build.*
+- *What does Linear's house style look like in its launch videos? Plan my film in a similar style without reusing its assets.*
+- *Is the headline "Ship your docs in minutes" readable if it stays on screen for 1.2 seconds?*
 
 ## Skills
 
@@ -76,6 +96,7 @@ Copy a skill folder into your agent's skills directory (for example `~/.claude/s
 - Library: https://launchscene.app
 - MCP guide: https://launchscene.app/mcp
 - Benchmarks: https://launchscene.app/benchmarks
+- Browse by topic: [YC launch videos](https://launchscene.app/yc-launch-videos), [SaaS launch video examples](https://launchscene.app/saas-launch-video-examples), [startup launch videos](https://launchscene.app/startup-launch-video-examples), [motion design launch videos](https://launchscene.app/motion-design-launch-video-examples), [product demo videos](https://launchscene.app/product-demo-video-examples), [best launch videos of 2026](https://launchscene.app/best-product-launch-videos-2026)
 - Official MCP Registry: `app.launchscene/launchscene`
 - Contact: hello@launchscene.app
 
